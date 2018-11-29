@@ -27,14 +27,17 @@
                                         <div class="el-input-group__append"><img src="/img/login-code.10fef840.png" class="login-code"></div>
                                     </div>
                                 </div>
-                            </div><button type="button" class="el-button button-login el-button--primary el-button--default">
+                            </div>
+                            <button type="button" class="el-button button-login el-button--primary el-button--default"></button>
                         </form>
                     </div>
                 </div>
-                <p flex="main:justify cross:center" class="page-login--options"><span><i aria-hidden="true" class="fa fa-question-circle"></i> 忘记密码</span><span>注册用户</span></p><button type="button" class="el-button page-login--quick el-button--info el-button--default">
+                <p flex="main:justify cross:center" class="page-login--options"><span><i aria-hidden="true" class="fa fa-question-circle"></i> 忘记密码</span><span>注册用户</span></p>
+                <button type="button" class="el-button page-login--quick el-button--info el-button--default">
                     <span>
             快速选择用户（测试功能）
-          </span></button>
+          </span>
+                </button>
             </div>
         </div>
     </div>
