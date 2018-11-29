@@ -18,14 +18,13 @@ import '@/assets/css/animate.css' // 动画
 // https://daneden.github.io/animate.css/
 
 import env from '@/unit/env' // 环境配置
-import vif from '@/unit/vif' // 校验方法
+import vif from '@/unit/ver' // 校验方法
 // import http from '@/unit/http' // 请求参数
-// import config from '@/unit/config' // 配置参数 和 公共函数
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
 })
