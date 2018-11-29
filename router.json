@@ -1,0 +1,330 @@
+{
+    "routes": [
+    {
+        "path": "/",
+        "component":
+        {
+            "name": "d2-layout-header-aside",
+            "mixins": [
+            {
+                "components":
+                {},
+                "computed":
+                {},
+                "methods":
+                {}
+            }],
+            "components":
+            {},
+            "computed":
+            {},
+            "methods":
+            {},
+            "staticRenderFns": [],
+            "_compiled": true,
+            "beforeCreate": [null],
+            "beforeDestroy": [null],
+            "__file": "src/layouts/HeaderAside/layout.vue"
+        },
+        "children": [
+        {
+            "path": "",
+            "name": "index",
+            "hidden": false,
+            "meta":
+            {
+                "requiresAuth": true,
+                "title": ""
+            },
+            "component":
+            {
+                "components":
+                {
+                    "D2HelpBtn":
+                    {
+                        "name": "d2-page-cover",
+                        "staticRenderFns": [],
+                        "_compiled": true,
+                        "beforeCreate": [null],
+                        "beforeDestroy": [null],
+                        "__file": "src/pages/Index/components/d2-help-btn/index.vue"
+                    },
+                    "D2Badge":
+                    {
+                        "staticRenderFns": [null],
+                        "_compiled": true,
+                        "_scopeId": "data-v-694d3b0f",
+                        "beforeCreate": [null],
+                        "beforeDestroy": [null],
+                        "__file": "src/pages/Index/components/d2-badge/index.vue"
+                    }
+                },
+                "staticRenderFns": [],
+                "_compiled": true,
+                "_scopeId": "data-v-12a8cd50",
+                "beforeCreate": [null],
+                "beforeDestroy": [null],
+                "__file": "src/pages/Index/page.vue"
+            }
+        }]
+    },
+    {
+        "path": "/refresh",
+        "component":
+        {
+            "name": "d2-layout-header-aside",
+            "mixins": [
+            {
+                "components":
+                {},
+                "computed":
+                {},
+                "methods":
+                {}
+            }],
+            "components":
+            {},
+            "computed":
+            {},
+            "methods":
+            {},
+            "staticRenderFns": [],
+            "_compiled": true,
+            "beforeCreate": [null],
+            "beforeDestroy": [null],
+            "__file": "src/layouts/HeaderAside/layout.vue"
+        },
+        "children": [
+        {
+            "path": "",
+            "name": "refresh",
+            "hidden": true,
+            "meta":
+            {
+                "requiresAuth": true,
+                "title": "refresh"
+            },
+            "component":
+            {}
+        }]
+    },
+    {
+        "path": "/redirect/:route*",
+        "component":
+        {
+            "name": "d2-layout-header-aside",
+            "mixins": [
+            {
+                "components":
+                {},
+                "computed":
+                {},
+                "methods":
+                {}
+            }],
+            "components":
+            {},
+            "computed":
+            {},
+            "methods":
+            {},
+            "staticRenderFns": [],
+            "_compiled": true,
+            "beforeCreate": [null],
+            "beforeDestroy": [null],
+            "__file": "src/layouts/HeaderAside/layout.vue"
+        },
+        "children": [
+        {
+            "path": "",
+            "name": "redirect",
+            "hidden": true,
+            "meta":
+            {
+                "requiresAuth": true,
+                "title": "redirect-:route*"
+            },
+            "component":
+            {}
+        }]
+    },
+    {
+        "path": "/demo1",
+        "component":
+        {
+            "name": "d2-layout-header-aside",
+            "mixins": [
+            {
+                "components":
+                {},
+                "computed":
+                {},
+                "methods":
+                {}
+            }],
+            "components":
+            {},
+            "computed":
+            {},
+            "methods":
+            {},
+            "staticRenderFns": [],
+            "_compiled": true,
+            "beforeCreate": [null],
+            "beforeDestroy": [null],
+            "__file": "src/layouts/HeaderAside/layout.vue"
+        },
+        "children": [
+        {
+            "path": "",
+            "name": "demo1",
+            "hidden": false,
+            "meta":
+            {
+                "requiresAuth": true,
+                "title": "演示 1"
+            },
+            "component":
+            {
+                "name": "demo1",
+                "components":
+                {
+                    "RouteInfo":
+                    {
+                        "name": "RouteInfo",
+                        "computed":
+                        {},
+                        "staticRenderFns": [],
+                        "_compiled": true,
+                        "beforeCreate": [null],
+                        "beforeDestroy": [null],
+                        "__file": "src/pages/Demo1/componnets/RouteInfo/RouteInfo.vue"
+                    },
+                    "FooterLink":
+                    {
+                        "name": "FooterLink",
+                        "staticRenderFns": [null],
+                        "_compiled": true,
+                        "_scopeId": "data-v-3e9790ee",
+                        "beforeCreate": [null],
+                        "beforeDestroy": [null],
+                        "__file": "src/pages/Demo1/componnets/FooterLink/FooterLink.vue"
+                    }
+                },
+                "staticRenderFns": [],
+                "_compiled": true,
+                "beforeCreate": [null],
+                "beforeDestroy": [null],
+                "__file": "src/pages/Demo1/Demo1.vue"
+            }
+        }]
+    },
+    {
+        "path": "/demo2",
+        "component":
+        {
+            "name": "d2-layout-header-aside",
+            "mixins": [
+            {
+                "components":
+                {},
+                "computed":
+                {},
+                "methods":
+                {}
+            }],
+            "components":
+            {},
+            "computed":
+            {},
+            "methods":
+            {},
+            "staticRenderFns": [],
+            "_compiled": true,
+            "beforeCreate": [null],
+            "beforeDestroy": [null],
+            "__file": "src/layouts/HeaderAside/layout.vue"
+        },
+        "children": [
+        {
+            "path": "",
+            "name": "demo2",
+            "hidden": false,
+            "meta":
+            {
+                "requiresAuth": true,
+                "title": "demo2"
+            },
+            "component":
+            {
+                "name": "demo2",
+                "components":
+                {
+                    "RouteInfo":
+                    {
+                        "name": "RouteInfo",
+                        "computed":
+                        {},
+                        "staticRenderFns": [],
+                        "_compiled": true,
+                        "beforeCreate": [null],
+                        "beforeDestroy": [null],
+                        "__file": "src/pages/Demo2/componnets/RouteInfo/RouteInfo.vue"
+                    },
+                    "FooterLink":
+                    {
+                        "name": "FooterLink",
+                        "staticRenderFns": [null],
+                        "_compiled": true,
+                        "_scopeId": "data-v-4206d428",
+                        "beforeCreate": [null],
+                        "beforeDestroy": [null],
+                        "__file": "src/pages/Demo2/componnets/FooterLink/FooterLink.vue"
+                    }
+                },
+                "staticRenderFns": [],
+                "_compiled": true,
+                "beforeCreate": [null],
+                "beforeDestroy": [null],
+                "__file": "src/pages/Demo2/Demo2.vue"
+            }
+        }]
+    },
+    {
+        "path": "/login",
+        "name": "login",
+        "meta":
+        {
+            "requiresAuth": false,
+            "title": "login"
+        },
+        "component":
+        {
+            "beforeDestroy": [null, null],
+            "methods":
+            {},
+            "staticRenderFns": [null],
+            "_compiled": true,
+            "beforeCreate": [null],
+            "__file": "src/pages/Login/page.vue"
+        }
+    },
+    {
+        "path": "*",
+        "name": "*",
+        "meta":
+        {
+            "requiresAuth": true,
+            "title": "*"
+        },
+        "component":
+        {
+            "staticRenderFns": [],
+            "_compiled": true,
+            "_scopeId": "data-v-4647b41a",
+            "beforeCreate": [null],
+            "beforeDestroy": [null],
+            "__file": "src/pages/Error404/page.vue"
+        }
+    }]
+}
