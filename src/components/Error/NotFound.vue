@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-// @import '~@/assets/css/public.scss';
+@import '~@/assets/css/public.scss';
 .page {
   background: #303133;
   background-blend-mode: multiply,multiply;
