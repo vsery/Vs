@@ -1,70 +1,150 @@
-<!--  -->
 <template>
-    <div class='Login'>
-        <div flex="dir:top main:center cross:center" class="page-login--content-main"><img src="/img/logo@2x.05fe4930.png" class="page-login--logo">
-            <div class="page-login--form">
-                <div class="el-card is-never-shadow">
-                    <div class="el-card__body">
-                        <form class="el-form el-form--label-top">
-                            <div class="el-form-item is-required el-form-item--default">
-                                <div class="el-form-item__content">
-                                    <div class="el-input el-input--default el-input-group el-input-group--prepend">
-                                        <div class="el-input-group__prepend"><i class="fa fa-user-circle-o"></i></div><input type="text" autocomplete="off" placeholder="用户名" class="el-input__inner">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="el-form-item is-required el-form-item--default">
-                                <div class="el-form-item__content">
-                                    <div class="el-input el-input--default el-input-group el-input-group--prepend">
-                                        <div class="el-input-group__prepend"><i class="fa fa-keyboard-o"></i></div><input type="password" autocomplete="off" placeholder="密码" class="el-input__inner">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="el-form-item is-required el-form-item--default">
-                                <div class="el-form-item__content">
-                                    <div class="el-input el-input--default el-input-group el-input-group--append el-input-group--prepend">
-                                        <div class="el-input-group__prepend">验证码</div><input type="text" autocomplete="off" placeholder="- - - -" class="el-input__inner">
-                                        <div class="el-input-group__append"><img src="/img/login-code.10fef840.png" class="login-code"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" class="el-button button-login el-button--primary el-button--default"></button>
-                        </form>
-                    </div>
-                </div>
-                <p flex="main:justify cross:center" class="page-login--options"><span><i aria-hidden="true" class="fa fa-question-circle"></i> 忘记密码</span><span>注册用户</span></p>
-                <button type="button" class="el-button page-login--quick el-button--info el-button--default">
-                    <span>
-            快速选择用户（测试功能）
-          </span>
-                </button>
+    <div class="login-page">
+        <div class="layer bg" id="login"></div>
+        <div class="layer flex-center">
+            <!-- logo部分 -->
+            <div class="logo-group">
+                <img src="./image/logo.png" alt="logo">
             </div>
+            <!-- 表单部分 -->
+            <div class="form-group">
+                <el-card>
+                    <el-form ref="loginForm" label-position="top" :rules="rules" :model="formLogin" size="default">
+                        <el-form-item prop="username">
+                            <el-input type="text" v-model="formLogin.username" placeholder="用户名">
+                                <i slot="prepend" class="fa fa-user-circle-o"></i>
+                            </el-input>
+                        </el-form-item>
+                        <el-form-item prop="password">
+                            <el-input type="password" v-model="formLogin.password" placeholder="密码">
+                                <i slot="prepend" class="fa fa-keyboard-o"></i>
+                            </el-input>
+                        </el-form-item>
+                        <el-form-item prop="code">
+                            <el-input type="text" v-model="formLogin.code" placeholder="- - - -">
+                                <template slot="prepend">验证码</template>
+                                <template slot="append">
+                                    <img class="login-code" src="./image/login-code.png">
+                                </template>
+                            </el-input>
+                        </el-form-item>
+                        <el-button size="default" @click="submit" type="primary" class="button-login">登录</el-button>
+                    </el-form>
+                </el-card>
+            </div>
+            <!-- 快速登录按钮 -->
+            <el-button size="default" type="info" class="button-help" @click="dialogVisible = true">
+                快速选择用户（测试功能）
+            </el-button>
         </div>
+        <el-dialog title="快速选择用户" :visible.sync="dialogVisible" width="400px">
+            <el-row :gutter="10" style="margin: -20px 0px -10px 0px;">
+                <el-col v-for="(user, index) in users" :key="index" :span="8">
+                    <div class="user-btn" @click="handleUserBtnClick(user)">
+                        <d2-icon name="user-circle-o" />
+                        <span>{{user.name}}</span>
+                    </div>
+                </el-col>
+            </el-row>
+        </el-dialog>
     </div>
 </template>
 <script>
+/* eslint-disable */
+require('particles.js')
+import config from './config/default'
+import { mapActions } from 'vuex'
 export default {
-    name: 'Login',
     data() {
-        return {}
+        return {
+            // 快速选择用户
+            dialogVisible: false,
+            users: [{
+                    name: '管理员',
+                    username: 'admin',
+                    password: 'admin'
+                },
+                {
+                    name: '编辑',
+                    username: 'editor',
+                    password: 'editor'
+                },
+                {
+                    name: '用户1',
+                    username: 'user1',
+                    password: 'user1'
+                }
+            ],
+            // 表单
+            formLogin: {
+                username: 'admin',
+                password: 'admin',
+                code: 'v9am'
+            },
+            // 校验
+            rules: {
+                username: [
+                    { required: true, message: '请输入用户名', trigger: 'blur' }
+                ],
+                password: [
+                    { required: true, message: '请输入密码', trigger: 'blur' }
+                ],
+                code: [
+                    { required: true, message: '请输入验证码', trigger: 'blur' }
+                ]
+            }
+        }
     },
-    beforeRouteEnter(to, from, next) {
-        next();
-        // console.group('在渲染该组件的对应路由被 confirm 前调用');
-    },
-    created() {},
     mounted() {
-        this.$nextTick(function() {});
+        // 初始化例子插件
+        particlesJS('login', config)
     },
-    methods: {},
     beforeDestroy() {
-        // console.group('销毁前状态  ===============>> beforeDestroy');
+        // 销毁 particlesJS
+        // thanks https://github.com/d2-projects/d2-admin/issues/65
+        // ref https://github.com/VincentGarreau/particles.js/issues/63
+        if (pJSDom && pJSDom.length > 0) {
+            pJSDom[0].pJS.fn.vendors.destroypJS()
+            pJSDom = []
+        }
     },
-    beforeRouteLeave(to, from, next) {
-        next();
-        // console.group('离开该组件的对应路由时调用');
-    },
+    methods: {
+        ...mapActions('d2admin/account', [
+            'login'
+        ]),
+        /**
+         * @description 接收选择一个用户快速登录的事件
+         * @param {Object} user 用户信息
+         */
+        handleUserBtnClick(user) {
+            this.formLogin.username = user.username
+            this.formLogin.password = user.password
+            this.submit()
+        },
+        /**
+         * @description 提交表单
+         */
+        // 提交登录信息
+        submit() {
+            this.$refs.loginForm.validate((valid) => {
+                if (valid) {
+                    // 登录
+                    // 注意 这里的演示没有传验证码
+                    // 具体需要传递的数据请自行修改代码
+                    this.login({
+                        vm: this,
+                        username: this.formLogin.username,
+                        password: this.formLogin.password
+                    })
+                } else {
+                    // 登录表单校验失败
+                    this.$message.error('表单校验失败')
+                }
+            })
+        }
+    }
 }
-
 </script>
-<style scoped></style>
+<style lang="scss">
+@import '~@/assets/css/login.scss';
+</style>
