@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "element-ui": "^2.4.11",
+    "flex.css": "^1.1.7",
     "ip": "^1.1.5",
     "nprogress": "^0.2.0",
     "particles.js": "^2.0.0",
