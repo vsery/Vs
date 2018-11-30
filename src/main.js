@@ -3,19 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
-// https://element.faas.ele.me/#/zh-CN/component/installation
+import modules from './modules'
 
 Vue.config.productionTip = false
-
-import '@/assets/font/css/font-awesome.css' // 图标字体
-// http://fontawesome.dashgame.com/#new
-
-import '@/assets/css/animate.css' // 动画
-// https://daneden.github.io/animate.css/
 
 import env from '@/unit/env' // 环境配置
 import vif from '@/unit/ver' // 校验方法

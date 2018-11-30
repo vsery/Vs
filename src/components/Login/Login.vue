@@ -100,18 +100,18 @@ export default {
         particlesJS('login', config)
     },
     beforeDestroy() {
-        // 销毁 particlesJS
-        // thanks https://github.com/d2-projects/d2-admin/issues/65
-        // ref https://github.com/VincentGarreau/particles.js/issues/63
-        if (pJSDom && pJSDom.length > 0) {
-            pJSDom[0].pJS.fn.vendors.destroypJS()
-            pJSDom = []
-        }
+        // // 销毁 particlesJS
+        // // thanks https://github.com/d2-projects/d2-admin/issues/65
+        // // ref https://github.com/VincentGarreau/particles.js/issues/63
+        // if (pJSDom && pJSDom.length > 0) {
+        //     pJSDom[0].pJS.fn.vendors.destroypJS()
+        //     pJSDom = []
+        // }
     },
     methods: {
-        ...mapActions('d2admin/account', [
-            'login'
-        ]),
+        // ...mapActions('d2admin/account', [
+        //     'login'
+        // ]),
         /**
          * @description 接收选择一个用户快速登录的事件
          * @param {Object} user 用户信息
