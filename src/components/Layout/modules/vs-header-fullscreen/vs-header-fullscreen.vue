@@ -1,10 +1,10 @@
 <!--  -->
 <template>
-    <div class='Sidebar'></div>
+    <div class='vs-header-fullscreen'></div>
 </template>
 <script>
 export default {
-    name: 'Sidebar',
+    name: 'vs-header-fullscreen',
     data() {
         return {}
     },

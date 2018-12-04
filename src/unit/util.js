@@ -19,7 +19,7 @@ util.recursiveRouterConfig = function recursiveRouterConfig(config = []) {
      */
     function recursive(con) {
         con.forEach((item) => {
-            console.log(item);
+            // console.log(item);
             const route = item.layout ? {
                 // -> 在主布局内的页面
                 // 页面地址

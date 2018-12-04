@@ -1,10 +1,10 @@
 <!--  -->
 <template>
-    <div class='tabs'></div>
+    <div class='vs-menu-header'></div>
 </template>
 <script>
 export default {
-    name: 'tabs',
+    name: 'vs-menu-header',
     data() {
         return {}
     },

@@ -1,10 +1,10 @@
 <!--  -->
 <template>
-    <div class='Navigation'></div>
+    <div class='vs-navigation'></div>
 </template>
 <script>
 export default {
-    name: 'Navigation',
+    name: 'vs-navigation',
     data() {
         return {}
     },

@@ -1,5 +1,6 @@
 // Element UI
 // https://element.faas.ele.me/#/zh-CN/component/installation
+import Vue from 'vue'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);

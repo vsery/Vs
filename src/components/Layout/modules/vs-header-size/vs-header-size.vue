@@ -1,10 +1,10 @@
 <!--  -->
 <template>
-    <div class='menu-side'></div>
+    <div class='vs-header-size'></div>
 </template>
 <script>
 export default {
-    name: 'menu-side',
+    name: 'vs-header-size',
     data() {
         return {}
     },
