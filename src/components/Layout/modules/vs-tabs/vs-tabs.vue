@@ -1,6 +1,8 @@
 <!--  -->
 <template>
-    <div class='vs-tabs'></div>
+    <div class='vs-tabs'>
+        vs-tabs
+    </div>
 </template>
 <script>
 export default {

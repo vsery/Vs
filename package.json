@@ -15,6 +15,7 @@
     "ip": "^1.1.5",
     "nprogress": "^0.2.0",
     "particles.js": "^2.0.0",
+    "screenfull": "^3.3.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

@@ -1,6 +1,8 @@
 <!--  -->
 <template>
-    <div class='vs-header-theme'></div>
+    <div class='vs-header-theme'>
+        vs-header-theme
+    </div>
 </template>
 <script>
 export default {

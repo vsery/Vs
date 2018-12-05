@@ -1,6 +1,8 @@
 <!--  -->
 <template>
-    <div class='vs-header-fullscreen'></div>
+    <div class='vs-header-fullscreen'>
+        vs-header-fullscreen
+    </div>
 </template>
 <script>
 export default {

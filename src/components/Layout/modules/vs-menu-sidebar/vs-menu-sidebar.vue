@@ -1,6 +1,8 @@
 <!--  -->
 <template>
-    <div class='vs-menu-sidebar'></div>
+    <div class='vs-menu-sidebar'>
+        vs-menu-sidebar
+    </div>
 </template>
 <script>
 export default {

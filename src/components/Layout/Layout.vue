@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-    <div class="ve-layout" :style="styleLayoutMainGroup" :class="{ grayMode: grayActive }">
+    <div class="ve-layout" :style="LayoutStyle">
         <div class="vs-layout-header">
             <div class="vs-header-sys">
                 <vs-header-fullscreen />
@@ -11,17 +11,21 @@
             </div>
         </div>
         <div class="vs-layout-container">
+            <vs-menu-header />
+            <vs-menu-sidebar />
+            <vs-tabs />
+                count: {{count}}
         </div>
     </div>
 </template>
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
+import $store from '@/store/index'
 export default {
     name: 'Layout',
     data() {
         return {
-            styleLayoutMainGroup: '',
-            grayActive: '',
+            LayoutStyle: ''
         }
     },
     components: {
@@ -30,40 +34,20 @@ export default {
         'vs-header-size': () => import('./modules/vs-header-size/vs-header-size'),
         'vs-header-theme': () => import('./modules/vs-header-theme/vs-header-theme'),
         'vs-header-user': () => import('./modules/vs-header-user/vs-header-user'),
-
         'vs-menu-header': () => import('./modules/vs-menu-header/vs-menu-header'),
-        'vs-menu-side': () => import('./modules/vs-menu-sidebar/vs-menu-sidebar'),
-
+        'vs-menu-sidebar': () => import('./modules/vs-menu-sidebar/vs-menu-sidebar'),
         'vs-tabs': () => import('./modules/vs-tabs/vs-tabs'),
-        // 'vs-header-error-log': () => import('./modules/header-error-log')
     },
     computed: {
-        // ...mapState('d2admin', {
-        //     keepAlive: state => state.page.keepAlive,
-        //     grayActive: state => state.gray.active,
-        //     transitionActive: state => state.transition.active,
-        //     asideCollapse: state => state.menu.asideCollapse
-        // }),
-        // ...mapGetters('d2admin', {
-        //     themeActiveSetting: 'theme/activeSetting'
-        // }),
-        /**
-         * @description 最外层容器的背景图片样式
-         */
-        // styleLayoutMainGroup() {
-        //     return {
-        //         ...this.themeActiveSetting.backgroundImage ? {
-        //             backgroundImage: `url('${this.$baseUrl}${this.themeActiveSetting.backgroundImage}')`
-        //         } : {}
-        //     }
-        // }
+        ...mapState('VsAdmin', {
+            shoplist: state => state.shoplist,
+            fullscreen: state => state.fullscreen,
+            fontSize: state => state.size,
+            count: state => state.count
+        }),
     },
-    created() {},
-    mounted() {
-        this.$nextTick(function() {});
-    },
+    mounted() {},
     methods: {
-        handleToggleAside() {}
     },
 }
 

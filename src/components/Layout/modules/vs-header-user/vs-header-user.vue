@@ -1,6 +1,8 @@
 <!--  -->
 <template>
-    <div class='vs-header-user'></div>
+    <div class='vs-header-user'>
+        vs-header-user
+    </div>
 </template>
 <script>
 export default {

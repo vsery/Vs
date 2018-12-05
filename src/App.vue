@@ -5,7 +5,11 @@
 </template>
 <script>
 export default {
-    name: 'App'
+    name: 'App',
+
+    mounted() {
+        // this.$store.dispatch('VsAdmin/fullscreen/listen')
+    }
 }
 
 </script>

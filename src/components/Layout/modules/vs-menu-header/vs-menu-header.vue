@@ -1,6 +1,8 @@
 <!--  -->
 <template>
-    <div class='vs-menu-header'></div>
+    <div class='vs-menu-header'>
+        vs-menu-header
+    </div>
 </template>
 <script>
 export default {

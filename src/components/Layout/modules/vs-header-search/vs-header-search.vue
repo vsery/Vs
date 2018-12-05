@@ -1,6 +1,8 @@
 <!--  -->
 <template>
-    <div class='vs-header-search'></div>
+    <div class='vs-header-search'>
+        vs-header-search
+    </div>
 </template>
 <script>
 export default {
